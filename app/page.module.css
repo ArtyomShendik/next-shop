@@ -28,10 +28,48 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 32px;
-  grid-row-start: 2;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #2563eb;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.cartContainer {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+
+  @media (max-width: 768px) {
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
 .main ol {
