@@ -1,0 +1,25 @@
+.productItem {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.trashButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    color: #2563eb;
+  }
+}
+
+.price {
+  color: #2563eb;
+  font-weight: 500;
+}
