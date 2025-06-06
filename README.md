@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Интернет-магазин на Next.js
 
-## Getting Started
+Современный интернет-магазин, построенный с использованием Next.js, с поддержкой бесконечной прокрутки, корзиной и отзывами.
 
-First, run the development server:
+## Реализованные функции
+
+- ✅ Адаптивный дизайн для мобильных устройств и планшетов
+- ✅ Отображение отзывов с безопасным рендерингом HTML
+- ✅ Загрузка товаров через API с бесконечной прокруткой
+- ✅ Интерактивная корзина с возможностью изменения количества товаров
+- ✅ Сохранение состояния корзины в localStorage
+- ✅ Маска для ввода номера телефона
+- ✅ Валидация формы заказа
+- ✅ Отображение уведомления об успешном заказе
+- ✅ Оптимизация производительности с использованием SSR
+- ✅ Защита от XSS-атак при отображении отзывов
+- ✅ Обработка ошибок и состояний загрузки
+
+## Технические особенности
+
+- Использование Next.js для SSR и оптимизации производительности
+- CSS modules для стилизации
+- DOMPurify для безопасного рендеринга HTML
+- IMask для маски ввода телефона
+- React Intersection Observer для бесконечной прокрутки
+- TypeScript для типизации
+- Zustand для работы с состоянием приложения
+- Prettier для форматирования кода
+
+## Установка и запуск
+
+1. Клонируйте репозиторий:
+
+```bash
+git clone [url-репозитория]
+cd shop
+```
+
+2. Установите зависимости:
+
+```bash
+npm install
+```
+
+3. Запустите проект в режиме разработки:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Откройте [http://localhost:3000](http://localhost:3000) в браузере
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Сборка для продакшена
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Структура проекта
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` - основные компоненты и страницы приложения
+  - `components/` - переиспользуемые компоненты / иконки
+  - `modules/` - компоненты с бизнес логикой
+  - `store/` - хранилище приложения
+  - `page.tsx` - главная страница
+  - `layout.tsx` - корневой layout
+- `public/` - статические файлы
+- `styles/` - глобальные стили
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Проект использует следующие эндпоинты:
 
-## Deploy on Vercel
+- `GET url/reviews` - получение списка отзывов
+- `GET url/products` - получение списка товаров
+- `POST url/order` - отправка заказа
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Безопасность
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Защита от XSS-атак при отображении отзывов
+- Валидация ввода номера телефона
+- Безопасное хранение данных корзины в localStorage
+
+## Производительность
+
+- SSR для быстрой первоначальной загрузки
+- Скелетон для карточек продукта
+- Ленивая загрузка контента при прокрутке
+- Кэширование данных в localStorage
